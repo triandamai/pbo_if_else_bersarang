@@ -71,8 +71,10 @@ public class Main {
                 matrix.runMatrixBasic();
                 break;
            case 9:
+               matrix.runMatrixAdvance();
                 break;
            case 10:
+               matrix.runMatrix();
                 break;
            default:
                 printLn("Pilihan Salah");

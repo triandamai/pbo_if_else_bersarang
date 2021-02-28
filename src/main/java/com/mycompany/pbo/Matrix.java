@@ -18,8 +18,8 @@ public class Matrix {
     public void runMatrixBasic(){
         _baris =2;
         _kolom = 2;
-         _matrixA= new double[_baris][_kolom];
-         _matrixB = new double[_baris][_kolom];
+        _matrixA= new double[_baris][_kolom];
+        _matrixB = new double[_baris][_kolom];
         Main.printLn("Masukkan Matriks A");
         for (int i = 0; i < 2; i++) {
             for (int j = 0; j < 2; j++) {
@@ -49,7 +49,7 @@ public class Matrix {
             Main.print("\n");
         }
         
-        getHasil(true);
+        getHasil("penjumlahan");
     }
     
     
@@ -91,23 +91,95 @@ public class Matrix {
             Main.print("\n");
         }
         
-        getHasil(false);
+        getHasil("pengurangan");
     }
-    
-    private void getHasil(boolean penjumlahan){
+    public void runMatrix(){
+           _baris =2;
+           _kolom =2;
+           _matrixA = new double[_baris][_kolom];
+           _matrixB = new double[_baris][_kolom];
+           Main.printLn("Masukkan Matriks A");
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 2; j++) {
+                Main.printLn("["+(i+1)+"]["+(j+1)+"]");
+                _matrixA[i][j] = Main.getScanner().nextDouble();
+            }
+        }
+        Main.print("Masukkan Matriks B");
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 2; j++) {
+                Main.printLn("["+(i+1)+"]["+(j+1)+"]");
+                _matrixB[i][j] = Main.getScanner().nextDouble();
+            }
+        }
+        Main.printLn("Matrix A");
+        for (double[] ds : _matrixA) {
+            for (double d : ds) {
+                Main.print(""+d+" ");
+            }
+            Main.print("\n");
+        }
+        Main.printLn("Matrix B");
+        for (double[] ds : _matrixB) {
+            for (double d : ds) {
+                Main.print(""+d+" ");
+            }
+            Main.print("\n");
+        }
+        
+        getHasilPerkalian();
+    }
+    private void getHasil(String hasil){
         Main.printLn("Hasil Penjumlahan Matriks A dan Matriks B");
         for (int i = 0; i < _baris; i++) {
             for (int j = 0; j < _kolom; j++) {
-                 if(penjumlahan){
+                 if(hasil.equalsIgnoreCase("penjumlahan")){
                     Main.print(""+jumlahkan(_matrixA[i][j], _matrixB[i][j]));
+                 }if(hasil.equalsIgnoreCase("pengurangan")){
+                     Main.print(""+kurangkan(_matrixA[i][j], _matrixB[i][j]));
                  }else{
-                      Main.print(""+kurangkan(_matrixA[i][j], _matrixB[i][j]));
+                      Main.print(""+kalikan(_matrixA[i][j], _matrixB[i][j]));
                  }
             }
             Main.print("\n");
         }
         
+    }
+    
+    private void getHasilPerkalian(){
+        double hasil[][] = new double[2][2];
+       
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 2; j++) {
+                double total =0;
+                
+                for (int k = 0; k < 2; k++) {
+                    total = total + kalikan(_matrixA[i][k], _matrixB[k][j]);
+                }
+                hasil[i][j] = total;
+               
+                
+            }
+           
+        }
         
+        Main.printLn("Proses Perkalian Matriks A dan Matriks B");
+      
+       Main.printLn(""
+               +_matrixA[0][0]+"*"+_matrixB[0][0] +"+"+_matrixA[0][1]+"*"+_matrixB[1][0]+
+               "\t"+_matrixA[0][0]+"*"+_matrixB[0][1]+"+"+_matrixA[0][1]+"*"+_matrixB[1][1]+
+               "\n" +_matrixA[1][0]+"*"+_matrixB[0][0] +"+"+_matrixA[1][1]+"*"+_matrixB[1][0]+
+               "\t"+_matrixA[1][0]+"*"+_matrixB[0][1]+"+"+_matrixA[1][1]+"*"+_matrixB[1][1]);
+       Main.printLn("");
+       
+        Main.printLn("Hasil Perkalian Matriks A Matriks B");
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 2; j++) {
+                Main.print(""+hasil[i][j]);
+            }
+            Main.printLn("");
+        }
+       
     }
     
     private double jumlahkan(double  matrixa ,double  matrixb){
