@@ -18,6 +18,7 @@ public class Main {
     private HireKaryawan hireKaryawan;
     private HariKerja hariKerja;
     private BilanganGenapGanjil bilanganGenap;
+    private Penjumlahan penjumlahan;
     
     public static void main(String[] args) {
 	// TODO code application logic here
@@ -34,6 +35,7 @@ public class Main {
        hireKaryawan = new HireKaryawan();
        hariKerja = new HariKerja();
        bilanganGenap = new BilanganGenapGanjil();
+       penjumlahan = new Penjumlahan();
        
        printLn("==== Program PBO ====");
        printLn("1. Nilai Huruf");
@@ -55,21 +57,22 @@ public class Main {
                 hariKerja.run();
                 break;
            case 5:
-               bilanganGenap.runGenap();
-               break;
+                bilanganGenap.runGenap();
+                break;
            case 6:
-               bilanganGenap.runGanjil();
-               break;
+                bilanganGenap.runGanjil();
+                break;
            case 7:
-               break;
+                penjumlahan.run();
+                break;
            case 8:
-               break;
+                break;
            case 9:
-               break;
+                break;
            case 10:
                 break;
            default:
-               printLn("Pilihan Salah");
+                printLn("Pilihan Salah");
        }      
     }
     public static Scanner getScanner(){
