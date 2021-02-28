@@ -28,16 +28,16 @@ public class HireKaryawan {
         Main.printLn("Hasil:\nNama: "+_name+"\nHasil:"+getJawaban());
     }
     
-    public boolean cekJawaban(String jawaban){
+    private boolean cekJawaban(String jawaban){
         return jawaban.equalsIgnoreCase("y") && jawaban.equalsIgnoreCase("yes");
     }
-    public String getJawaban(){
+    private String getJawaban(){
         if (getHasil()) {
             return "Lulus";
         }
         return "Tidak Lulus";
     }
-    public boolean getHasil(){
+    private boolean getHasil(){
         return _kesehatan && _wawancara && _psikotes && _tertulis;
     }
 }
