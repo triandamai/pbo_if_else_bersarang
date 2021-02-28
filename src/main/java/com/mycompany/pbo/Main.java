@@ -15,6 +15,7 @@ public class Main {
     private Scanner scanner;
     private NilaiUjian nilaiUjian;
     private PredikatCumlaude predikatCumlaude;
+    private HireKaryawan hireKaryawan;
     
     public static void main(String[] args) {
 	// TODO code application logic here
@@ -28,10 +29,12 @@ public class Main {
        
        nilaiUjian = new NilaiUjian();
        predikatCumlaude = new PredikatCumlaude();
+       hireKaryawan = new HireKaryawan();
        
        printLn("==== Program PBO ====");
        printLn("1. Nilai Huruf");
-        printLn("2. Predikat");
+       printLn("2. Predikat");
+       printLn("3. Seleksi Karyawan");
        printLn("Masukkan Pilihan (1-10)=");
        int pilihan = scanner.nextInt();
        switch(pilihan){
@@ -41,6 +44,9 @@ public class Main {
            case 2:
                predikatCumlaude.run();
                break;
+           case 3:
+                hireKaryawan.run();
+                break;
        }      
     }
     public static Scanner getScanner(){
