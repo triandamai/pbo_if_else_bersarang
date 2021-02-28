@@ -43,6 +43,13 @@ public class Main {
        printLn("1. Nilai Huruf");
        printLn("2. Predikat");
        printLn("3. Seleksi Karyawan");
+       printLn("4. Hari Kerja");
+       printLn("5. Bilangan Genap");
+       printLn("6. Bilangan Ganjil");
+       printLn("7. Penjumlahan Loop");
+       printLn("8. Penjumlahan Matriks");
+       printLn("9. Pengurangan Matriks");
+       printLn("10. Perkalian Matriks");
        printLn("Masukkan Pilihan (1-10)=");
        int pilihan = scanner.nextInt();
        switch(pilihan){

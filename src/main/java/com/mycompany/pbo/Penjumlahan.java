@@ -10,10 +10,10 @@ package com.mycompany.pbo;
  * @author Kaila Indonesia
  */
 public class Penjumlahan {
-    private double[] input={};
+    private double input[] = new double[4];
     public void run(){
         for (int i = 0; i < 4; i++) {
-            Main.printLn("Masukkan bilangan ke-"+i+1);
+            Main.printLn("Masukkan bilangan ke-"+(i+1));
             input[i] =Main.getScanner().nextDouble();
         }
         

@@ -12,15 +12,16 @@ package com.mycompany.pbo;
 public class BilanganGenapGanjil {
     public void runGenap(){
         Main.printLn("MENCETAK BILANGAN GENAP");
-        for (int i = 0; i < 10; i++) {
+        for (int i = 1; i <= 10; i++) {
             if(i%2 ==0){
+                if(i != 0)
                 Main.printLn(""+i);
             }
         }
     }
     public void runGanjil(){
         Main.printLn("MENCETAK BILANGAN GANJIL");
-        for (int i = 0; i < 10; i++) {
+        for (int i = 1; i <= 10; i++) {
             if(i%2 !=0){
                 Main.printLn(""+i);
             }

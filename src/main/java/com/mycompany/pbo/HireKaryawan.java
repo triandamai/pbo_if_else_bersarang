@@ -29,7 +29,7 @@ public class HireKaryawan {
     }
     
     private boolean cekJawaban(String jawaban){
-        return jawaban.equalsIgnoreCase("y") && jawaban.equalsIgnoreCase("yes");
+        return jawaban.equalsIgnoreCase("y") || jawaban.equalsIgnoreCase("yes");
     }
     private String getJawaban(){
         if (getHasil()) {

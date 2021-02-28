@@ -25,7 +25,7 @@ public class PredikatCumlaude {
     }
     
     private String cekPredikat(){
-        if(_ip <= 3.51){
+        if(_ip >= 3.51){
             if(_masaStudi <=4){
                 return "Anda Cumlaude";
             }else{

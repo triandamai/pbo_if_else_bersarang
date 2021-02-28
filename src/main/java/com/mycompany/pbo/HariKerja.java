@@ -23,6 +23,7 @@ public class HariKerja {
                 + "7. Minggu\n");
         Main.print("Pilihan:");
         _pilihan = Main.getScanner().nextInt();
+        Main.printLn("Pilihan :"+_pilihan);
         Main.printLn(getHari());
         
         
@@ -30,8 +31,7 @@ public class HariKerja {
     private String getHari(){
         switch(_pilihan){
             case 1:
-                return "Hari Kerja";
-                
+                return "Hari Kerja";   
             case 2:
                return "Hari Kerja";
             case 3:
