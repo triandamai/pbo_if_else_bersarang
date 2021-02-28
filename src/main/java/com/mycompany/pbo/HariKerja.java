@@ -25,8 +25,6 @@ public class HariKerja {
         _pilihan = Main.getScanner().nextInt();
         Main.printLn("Pilihan :"+_pilihan);
         Main.printLn(getHari());
-        
-        
     }
     private String getHari(){
         switch(_pilihan){

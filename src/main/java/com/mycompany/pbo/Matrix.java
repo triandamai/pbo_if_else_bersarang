@@ -148,23 +148,16 @@ public class Matrix {
     
     private void getHasilPerkalian(){
         double hasil[][] = new double[2][2];
-       
         for (int i = 0; i < 2; i++) {
             for (int j = 0; j < 2; j++) {
                 double total =0;
-                
                 for (int k = 0; k < 2; k++) {
                     total = total + kalikan(_matrixA[i][k], _matrixB[k][j]);
                 }
-                hasil[i][j] = total;
-               
-                
-            }
-           
+                hasil[i][j] = total;   
+            }   
         }
-        
-        Main.printLn("Proses Perkalian Matriks A dan Matriks B");
-      
+       Main.printLn("Proses Perkalian Matriks A dan Matriks B");
        Main.printLn(""
                +_matrixA[0][0]+"*"+_matrixB[0][0] +"+"+_matrixA[0][1]+"*"+_matrixB[1][0]+
                "\t"+_matrixA[0][0]+"*"+_matrixB[0][1]+"+"+_matrixA[0][1]+"*"+_matrixB[1][1]+
