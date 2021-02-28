@@ -14,6 +14,7 @@ import java.util.Scanner;
 public class Main {
     private Scanner scanner;
     private NilaiUjian nilaiUjian;
+    private PredikatCumlaude predikatCumlaude;
     
     public static void main(String[] args) {
 	// TODO code application logic here
@@ -26,17 +27,25 @@ public class Main {
        
        
        nilaiUjian = new NilaiUjian();
+       predikatCumlaude = new PredikatCumlaude();
+       
        printLn("==== Program PBO ====");
        printLn("1. Nilai Huruf");
-       print("Masukkan Pilihan (1-10)=");
+        printLn("2. Predikat");
+       printLn("Masukkan Pilihan (1-10)=");
        int pilihan = scanner.nextInt();
        switch(pilihan){
            case 1:
-               nilaiUjian.inputNilai();
+               nilaiUjian.run();
+               break;
+           case 2:
+               predikatCumlaude.run();
                break;
        }      
     }
-    
+    public static Scanner getScanner(){
+        return new Scanner(System.in);
+    }
     public static void print(String message){
         System.out.print(message);
     }

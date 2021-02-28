@@ -16,13 +16,10 @@ public class NilaiUjian {
      * 
      */
     private double _nilai;
-    private Scanner scanner;
-    public NilaiUjian(){
-        scanner = new Scanner(System.in);
-    }
-    public void inputNilai(){
+    
+    public void run(){
         Main.printLn("Inputkan Nilai (0-100) = ");
-        _nilai = scanner.nextDouble();
+        _nilai = Main.getScanner().nextDouble();
         Main.printLn("Nilai Huruf Anda = "+cekNilai(_nilai));
     }
     
