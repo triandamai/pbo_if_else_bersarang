@@ -19,6 +19,7 @@ public class Main {
     private HariKerja hariKerja;
     private BilanganGenapGanjil bilanganGenap;
     private Penjumlahan penjumlahan;
+    private Matrix matrix;
     
     public static void main(String[] args) {
 	// TODO code application logic here
@@ -36,6 +37,7 @@ public class Main {
        hariKerja = new HariKerja();
        bilanganGenap = new BilanganGenapGanjil();
        penjumlahan = new Penjumlahan();
+       matrix = new Matrix();
        
        printLn("==== Program PBO ====");
        printLn("1. Nilai Huruf");
@@ -66,6 +68,7 @@ public class Main {
                 penjumlahan.run();
                 break;
            case 8:
+                matrix.runMatrixBasic();
                 break;
            case 9:
                 break;
