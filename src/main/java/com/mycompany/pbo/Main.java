@@ -16,6 +16,7 @@ public class Main {
     private NilaiUjian nilaiUjian;
     private PredikatCumlaude predikatCumlaude;
     private HireKaryawan hireKaryawan;
+    private HariKerja hariKerja;
     
     public static void main(String[] args) {
 	// TODO code application logic here
@@ -30,6 +31,7 @@ public class Main {
        nilaiUjian = new NilaiUjian();
        predikatCumlaude = new PredikatCumlaude();
        hireKaryawan = new HireKaryawan();
+       hariKerja = new HariKerja();
        
        printLn("==== Program PBO ====");
        printLn("1. Nilai Huruf");
@@ -47,6 +49,23 @@ public class Main {
            case 3:
                 hireKaryawan.run();
                 break;
+           case 4:
+                hariKerja.run();
+                break;
+           case 5:
+               break;
+           case 6:
+               break;
+           case 7:
+               break;
+           case 8:
+               break;
+           case 9:
+               break;
+           case 10:
+                break;
+           default:
+               printLn("Pilihan Salah");
        }      
     }
     public static Scanner getScanner(){

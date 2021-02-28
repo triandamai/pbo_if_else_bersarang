@@ -10,7 +10,43 @@ package com.mycompany.pbo;
  * @author Kaila Indonesia
  */
 public class HariKerja {
-    public void run(){
-    }
+    private int _pilihan;
     
+    public void run(){
+        Main.printLn("Pilihan:\n"
+                + "1. Senin\n"
+                + "2. Selasa\n"
+                + "3. Rabu\n"
+                + "4. Kamis\n"
+                + "5. Jum'at\n"
+                + "6. Sabtu\n"
+                + "7. Minggu\n");
+        Main.print("Pilihan:");
+        _pilihan = Main.getScanner().nextInt();
+        Main.printLn(getHari());
+        
+        
+    }
+    private String getHari(){
+        switch(_pilihan){
+            case 1:
+                return "Hari Kerja";
+                
+            case 2:
+               return "Hari Kerja";
+            case 3:
+                return "Hari Kerja";
+            case 4:
+                return "Hari Kerja";
+            case 5:
+                return "Hari Kerja";
+            case 6:
+                return "Hari Kerja";
+            case 7:
+                return "Hari Libur";
+            default:
+                return "Pilihan Salah";
+        }
+        
+    }
 }
